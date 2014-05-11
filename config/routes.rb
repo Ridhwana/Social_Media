@@ -1,6 +1,9 @@
 SocialMediaApp::Application.routes.draw do
-  resources :users
+  root to: "main#index"
 
+  scope "api" do
+    resources :users
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
