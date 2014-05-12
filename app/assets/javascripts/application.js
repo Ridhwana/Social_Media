@@ -12,3 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-1.6.2.js
+//= require jquery.tmpl.js
+//= require knockout-2.1.0.js
+//= require knockout.mapping-latest.js
+//= require knockout-bootstrap.js
+//= require users.js 
