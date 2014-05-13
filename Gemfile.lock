@@ -73,6 +73,7 @@ GEM
       activesupport (= 3.2.16)
       bundler (~> 1.0)
       railties (= 3.2.16)
+    rails-assets-knockoutjs (3.1.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -124,6 +125,7 @@ DEPENDENCIES
   jquery-rails
   pg (= 0.15.1)
   rails (= 3.2.16)
+  rails-assets-knockoutjs
   rails_12factor (= 0.0.2)
   sass-rails (~> 3.2.3)
   sdoc (= 0.3.20)
