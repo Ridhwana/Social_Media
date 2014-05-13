@@ -23,3 +23,4 @@ coverage
 
 spec/reports
 test-reports
+public/assets/**
