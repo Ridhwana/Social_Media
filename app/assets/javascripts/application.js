@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require js-routes
+//= require jquery.tmpl
+//= require bootstrap.min
+//= require knockout
+//= require users

@@ -42,5 +42,6 @@ function UserViewModel() {
 
 }
 
-
-ko.applyBindings(new UserViewModel());
+$(document).ready(function() {
+    ko.applyBindings(new UserViewModel());
+});
