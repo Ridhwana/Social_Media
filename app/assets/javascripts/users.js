@@ -1,3 +1,8 @@
+$(window).load(function(){
+   $('#myModal').modal()
+}) 
+
+
 function User(data) {
     this.name = ko.observable(data.name);
     this.bio = ko.observable(data.bio);
