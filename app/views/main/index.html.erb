@@ -66,33 +66,36 @@
           </div><!-- /.container-fluid -->
         </nav>
 
-        <div id="people" data-bind="template: { name: 'personTemplate', foreach: people }"></div>
+        <div id="people" data-bind="template: { name: 'personTemplate', foreach: users }"></div>
         <script id="personTemplate" type="text/x-jquery-tmpl">
             <div class="container">
               <div class="row">
 
                 <div class="col-md-4">
                   <a href="#"><img class="img-responsive img-circle" src="/assets/person.png"></a>
-                  <h3 class="text-center" contenteditable="true" data-bind="value: name"></h3>
-                  <h3 class="editable" data-bind="editable: name"></h3>
+                  <h3 class="text-center"><input style="text-align:center" data-bind="value: name" /></h3>
                 </div>
 
                 <div class="col-md-8">
                   <h3 class="text-center">Biography</h3>
-                  <p>${ bio }</p>
+                  <p><textarea class="form-control" rows="10" data-bind="value: bio" /></p>
                 </div>
 
               </div>
             </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="text-center">Work History</h3>
-              <p>${ work }</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-center">Work History</h3>
+                <p data-bind="text: work"></p>
+                <p data-bind="text: email"></p>
+              </div>
             </div>
           </div>
-        </div>
+
+          <button data-bind="click: save">Save</button>
+        </script>
 
         <footer>
           <div class="container">
@@ -112,24 +115,6 @@
           </div>
         </footer>
 
-        </script>
-
-
-
- <!--        <div id="people" data-bind="template: { name: 'personTemplate', foreach: people }"></div>
-        <script id="personTemplate" type="text/x-jquery-tmpl">
-            <section class="person">
-                <img src="../img/person.png" alt="${ name }"/>
-                <h1>${ name }</h1>
-                <email>${ email }</email>
-                <span class="bio">${ bio }</span>
-                <span class="work">${ work }</span>
-                <div class="tools">
-                    <button data-bind="click: deleteMe">Delete</button>
-                </div>
-            </section>
-        </script>
- -->
         <script src="/assets/jquery-1.6.2.js"></script>
         <script src="/assets/jquery.tmpl.js"></script>
         <script src="/assets/knockout-2.1.0.js"></script>
