@@ -17,3 +17,4 @@
 //= require bootstrap.min
 //= require bootstrap-3-typeahead.min
 //= require knockout
+//= require users
