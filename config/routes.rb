@@ -2,7 +2,12 @@ SocialMediaApp::Application.routes.draw do
   root to: "main#index"
 
   scope "api" do
-    resources :users, :companies
+    resources :users do
+      resources :companies, only: :index
+    end
+    resources :companies do
+      resources :users, only: :index
+    end
   end
 
   # The priority is based upon order of creation:
