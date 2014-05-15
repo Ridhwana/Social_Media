@@ -3,6 +3,28 @@ function activate_modal(){
    $('#myModal').modal()
 }
 
+function addCompany(){
+  $('#search').typeahead({
+  property: "user_role",
+  minLength: 1,
+  delay: 1500,
+  // source: colors
+
+  source: function (query, process) {
+      return $.getJSON(
+          '/api/companies.json',
+          { query: query },
+          function (data) {
+            var newData = [];
+             $.each(data, function(){
+
+                  newData.push(this.name);
+              });
+              return process(newData);
+          });
+  }
+  });
+}
 
 // function User(data) {
 //     console.log("in User");
@@ -24,9 +46,6 @@ function UserViewModel() {
     var self = this;
     self.users = ko.observableArray([]);
     console.log("ping", self.users);
-    workHistory = ko.computed(function() {
-        // console.log("hsbcbds", this.work());
-    }, this);
     console.log(self.users);
     save = function() {
       console.log("put data to server", ko.toJSON({ users: self.users }));
@@ -44,4 +63,5 @@ function UserViewModel() {
 
 $(document).ready(function() {
     ko.applyBindings(new UserViewModel());
+
 });
