@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Brand</a>
+              <a class="navbar-brand" href="#">Professional Inc.</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,12 +60,12 @@
 
                 <div class="col-md-4">
                   <a href="#"><img class="img-responsive img-circle" src="/assets/person.png"></a>
-                  <h3 class="text-center"><input style="text-align:center" data-bind="value: name" /></h3>
+                  <h3 class="text-center"><input id = "name" class="form-control" data-bind="value: name" placeholder="Enter full name..."/></h3>
                 </div>
 
                 <div class="col-md-8">
                   <h3 class="text-center">Biography</h3>
-                  <p><textarea class="form-control" rows="10" data-bind="value: bio" /></p>
+                  <p><textarea class="form-control" rows="10" placeholder="Enter a brief biography.." data-bind="value: bio" /></p>
                 </div>
 
               </div>
@@ -76,10 +76,10 @@
 
               <div class="col-md-12 text-center">
 
-                <h3 class="text-center">Summary of Work History</h3>
+                <h3 class="text-center">Work History</h3>
 
               <!-- Button trigger modal -->
-                <button onclick="activate_modal()" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add Work</button>
+                <button onclick="activate_modal()" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Edit Work History</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -87,10 +87,12 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Please describe your working experience, briefly: </h4>
+                        <h4 class="modal-title" id="myModalLabel">Briefly describe your working experience...</h4>
                       </div>
                       <div class="modal-body">
-                        <p><textarea id ="workingHistoryModal" class="form-control" rows="10" data-bind="value: work"/></p>
+                        <p><textarea id ="workingHistoryModal" class="form-control" rows="10" data-bind="value: work" placeholder="Enter summary of work history..." /></p>
+                        <h4>Company Name:</h4>
+                          <p><input id="search" onfocus= "addCompany()"/></p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="updateWorkingHistorySummary()" >OK</button>
@@ -98,34 +100,31 @@
                     </div>
                   </div>
                 </div>
-              
-                <p id ="workingHistorySummary" data-bind="text: work"></p>
-                <p data-bind="text: email"></p>
 
-               <input id="search" onfocus= "addCompany()"/>
+                <p id ="workingHistorySummary" data-bind="text: work"></p>
 
               </div>
             
             </div>
           </div>
 
-          <button class="btn btn-primary pull-right"  data-bind="click: save" >Save</button>
-        </script>
+          <button class="btn btn-primary pull-right" data-bind="click: save">Save</button>
 
-        <footer>
-          <div class="container">
-          <div class="row">
-            <div class="col-md-4">&copy; 2013</div>
-            <div class="col-md-4">
-              <ul class="nav nav-pills">
-                <li class="active"><a href="#">About Us</a></li>
-                <li><a href="#">Support 24x7</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
+
+          <footer>
+            <div class="container">
+            <div class="row">
+              <div class="col-md-4">&copy; 2013</div>
+              <div class="col-md-4">
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="text-right"data-bind="text: email"></h5>
+              </div>
             </div>
-            <div class="col-md-4">
-              <h5 class="text-right">Vacation Rentals</h5>
             </div>
-          </div>
-          </div>
-        </footer>
+          </footer>
+        </script>

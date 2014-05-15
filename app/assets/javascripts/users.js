@@ -35,7 +35,7 @@ function addCompany(){
 // }
 
 function updateWorkingHistorySummary() {
-$('#workingHistorySummary').text($('#workingHistoryModal').val()).change()
+$('#workingHistorySummary').text('Company Name: ' + $('#search').val() + "- " + $('#workingHistoryModal').val()).change()
 }
 
 function UserViewModel() {
