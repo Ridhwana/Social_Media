@@ -90,16 +90,16 @@
                         <h4 class="modal-title" id="myModalLabel">Please describe your working experience, briefly: </h4>
                       </div>
                       <div class="modal-body">
-                        <p><textarea class="form-control" rows="10" data-bind="value: work"/></p>
+                        <p><textarea id ="workingHistoryModal" class="form-control" rows="10" data-bind="value: work"/></p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="updateWorkingHistorySummary()" >OK</button>
                       </div>
                     </div>
                   </div>
                 </div>
               
-                <p data-bind="text: work"></p>
+                <p id ="workingHistorySummary" data-bind="text: work"></p>
                 <p data-bind="text: email"></p>
 
                <input id="search" onfocus= "addCompany()"/>

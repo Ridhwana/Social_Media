@@ -34,6 +34,10 @@ function addCompany(){
 //     this.email = ko.observable(data.email);
 // }
 
+function updateWorkingHistorySummary() {
+$('#workingHistorySummary').text($('#workingHistoryModal').val()).change()
+}
+
 function UserViewModel() {
     // Data
     $.getJSON("/api/users/1", function(allData) {
